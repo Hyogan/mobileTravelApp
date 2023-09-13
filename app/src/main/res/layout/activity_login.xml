@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".loginActivity"
+
+    android:background="@drawable/logo_slogan"
+    >
+    <!--        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lavender"
+                android:alpha=".7">
+            </RelativeLayout>
+        -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_login_24"
+            android:textSize="42dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONNEXION"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="32sp"
+            android:textColor="@color/white">
+
+        </TextView>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/password_login"
+                android:text="Bienvenue"
+                android:textColor="@color/lavender"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remplissez vos informations et connectez cous à votre compte"
+                android:alpha="0.7"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
+
+            <!--INPUT TYPE FOR THE USERNAME-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom d'utilisateur / Username"
+                android:labelFor="@id/username_login"
+                android:alpha="0.7"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/username_login"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:autofillHints="username"
+                android:drawableStart="@drawable/person_icon"
+                android:drawableEnd="@drawable/done_icon"/>
+
+            <!-- INPUT TYPE FOR THE PASSWORD-->
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mot de passe / password"
+                android:alpha="0.7"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/password_login"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:drawableStart="@drawable/lock_icon"
+                android:drawableEnd="@drawable/password_icon"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rester connecté"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.7" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/init_login"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Me connecter" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
